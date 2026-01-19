@@ -5,13 +5,11 @@ quantitative models for pricing derivatives, with a focus on
 Monte Carlo methods and market-consistent calibration.
 
 ## Projects
-### Inflation-Linked Derivatives
-- LMM-based nominal rates
-- Deterministic real rates
-- Inflation forward construction
-- Monte Carlo pricing of caps and floors
-- Antithetic variates and moment matching
-- Validation against EIOPA curves and market quotes
+### Equity Derivatives
+- Dupire local volatility model
+- Heston stochastic volatility model
+- Calibration to implied volatility surface
+- Monte Carlo pricing of exotic options
 
 ### Interest Rate Derivatives
 - Curve construction and bootstrapping
@@ -19,11 +17,13 @@ Monte Carlo methods and market-consistent calibration.
 - Cap/Floor pricing
 - Monte Carlo vs analytical benchmarks
 
-### Equity Derivatives
-- Dupire local volatility model
-- Heston stochastic volatility model
-- Calibration to implied volatility surface
-- Monte Carlo pricing of exotic options
+### Inflation-Linked Derivatives
+- LMM-based nominal rates
+- Deterministic real rates
+- Inflation forward construction
+- Monte Carlo pricing of caps and floors
+- Antithetic variates and moment matching
+- Validation against EIOPA curves and market quotes
 
 ## Technologies
 - Python (NumPy, SciPy, pandas)
