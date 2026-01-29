@@ -31,3 +31,24 @@ market-consistent calibration and Monte Carlo simulation.
 
 ## Disclaimer
 This code is for educational and research purposes only.
+
+## Module Structure
+Equity/
+├── README.md
+├── market_data.py
+├── volatility_surface.py
+├── heston/
+│   ├── dynamics.py
+│   ├── calibration.py
+│   └── pricer.py
+├── dupire/
+│   ├── local_vol_surface.py
+│   ├── calibration.py
+│   └── pricer.py
+├── monte_carlo/
+│   └── engine.py
+└── examples/
+    ├── heston_calibration.ipynb
+    ├── dupire_calibration.ipynb
+    └── exotic_pricing.ipynb
+
