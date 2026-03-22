@@ -1,54 +1,46 @@
-# Equity Derivatives Pricing
+# Option Pricing Models with Monte Carlo
 
-This module contains implementations of local and stochastic
-volatility models for equity derivatives pricing, with a focus on
-market-consistent calibration and Monte Carlo simulation.
+This project implements and compares three advanced option pricing models:
 
-## Models
+- Heston Stochastic Volatility Model
+- Merton Jump-Diffusion Model
+- Local Volatility Model (Dupire)
 
-### Local Volatility (Dupire)
-- Construction of implied volatility surface
-- Dupire local volatility formula
-- Numerical stabilization techniques
-- Monte Carlo pricing of European and exotic options
+## 🔍 Objectives
 
-### Stochastic Volatility (Heston)
-- Risk-neutral Heston dynamics
-- Calibration to implied volatility surface
-- Monte Carlo pricing of European and exotic options
+- Calibrate models to a synthetic implied volatility surface
+- Compare pricing performance on vanilla options
+- Analyze differences in pricing exotic options:
+  - Asian options
+  - Barrier options (Down-and-Out)
+  - Cliquet options
 
-## Methodology
-- Calibration performed via least squares minimization
-- Monte Carlo simulation with correlated Brownian motions
-- Validation against analytical benchmarks where available
+## ⚙️ Methods
 
-## Structure
-- `market_data.py`: synthetic or market-like implied vol data
-- `volatility_surface.py`: interpolation and surface handling
-- `dupire/`: local volatility model implementation
-- `heston/`: stochastic volatility model implementation
-- `monte_carlo/`: shared Monte Carlo engine
+- Monte Carlo simulation
+- Numerical optimization:
+  - Nelder-Mead (Heston)
+  - Differential Evolution (Merton)
+- Local volatility via Dupire formula
 
-## Disclaimer
-This code is for educational and research purposes only.
+## 📊 Results
 
-## Module Structure
-Equity/
-├── README.md
-├── market_data.py
-├── volatility_surface.py
-├── heston/
-│   ├── dynamics.py
-│   ├── calibration.py
-│   └── pricer.py
-├── dupire/
-│   ├── local_vol_surface.py
-│   ├── calibration.py
-│   └── pricer.py
-├── monte_carlo/
-│   └── engine.py
-└── examples/
-    ├── heston_calibration.ipynb
-    ├── dupire_calibration.ipynb
-    └── exotic_pricing.ipynb
+- Local Vol achieves best calibration (lowest RMSE)
+- Merton captures jump risk but overestimates some prices
+- Heston provides a balance between realism and flexibility
 
+## 🧪 Technologies
+
+- Python
+- NumPy / SciPy
+- Matplotlib
+
+## 📁 Structure
+
+- `src/`: model implementations
+- `notebooks/`: analysis and experiments
+- `report/`: full project report
+
+## Author
+
+Elia Ceolini
